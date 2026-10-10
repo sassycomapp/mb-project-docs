@@ -1,7 +1,7 @@
 ---
 title: "mb-project-docs"
 doc-id: "mb-c9d1d31b"
-updated: "2026-10-04"
+updated: "2026-10-10"
 ---
 
 # mb-project-docs
@@ -38,7 +38,6 @@ Run `git rev-parse --show-toplevel` and match the folder name:
 
 | Project | Documentation repository | Code repository |
 |---|---|---|
-| `makepdlf` | `makepdlf-project-library` (`C:\dev\dev-makepdlf\makepdlf-project-library`) | `makepdlf` (`C:\dev\dev-makepdlf\makepdlf`) |
 | `mb-3-cs` | `mb-3-cs-project-library` (`C:\dev\dev-mb-3-cs\mb-3-cs-project-library`) | `mb-3-cs` (`C:\dev\dev-mb-3-cs\mb-3-cs`) |
 | `mb4ecom` | `mb4ecom-project-library` (`C:\dev\dev-mb4ecom\mb4ecom-project-library`) | `mb4ecom` (`C:\dev\dev-mb4ecom\mb4ecom`) |
 | `mb5pdlf` | `mb5pdlf-project-library` (`C:\dev\dev-mb5pdlf\mb5pdlf-project-library`) | `mb5pdlf` (`C:\dev\dev-mb5pdlf\mb5pdlf`) |
