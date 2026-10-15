@@ -1,7 +1,7 @@
 ---
 title: "mb-project-docs"
 doc-id: "mb-c9d1d31b"
-updated: "2026-10-10"
+updated: "2026-10-15"
 ---
 
 # mb-project-docs
@@ -38,12 +38,12 @@ Run `git rev-parse --show-toplevel` and match the folder name:
 
 | Project | Documentation repository | Code repository |
 |---|---|---|
-| `mb-3-cs` | `mb-3-cs-project-library` (`C:\dev\dev-mb-3-cs\mb-3-cs-project-library`) | `mb-3-cs` (`C:\dev\dev-mb-3-cs\mb-3-cs`) |
-| `mb4ecom` | `mb4ecom-project-library` (`C:\dev\dev-mb4ecom\mb4ecom-project-library`) | `mb4ecom` (`C:\dev\dev-mb4ecom\mb4ecom`) |
-| `mb5pdlf` | `mb5pdlf-project-library` (`C:\dev\dev-mb5pdlf\mb5pdlf-project-library`) | `mb5pdlf` (`C:\dev\dev-mb5pdlf\mb5pdlf`) |
+| `mb-3-cs` | `mb-3-cs-project-library` (`C:\dev\dev-mb-3-cs\mb-3-cs-project-library`) | `mb-3-cs-app1` (`C:\dev\dev-mb-3-cs\mb-3-cs-app1`) |
+| `mb-4-ecom` | `mb-4-ecom-project-library` (`C:\dev\dev-mb-4-ecom\mb-4-ecom-project-library`) | `mb-4-ecom-app1` (`C:\dev\dev-mb-4-ecom\mb-4-ecom-app1`) |
+| `mb-5-pdlf` | `mb-5-pdlf-project-library` (`C:\dev\dev-mb-5-pdlf\mb-5-pdlf-project-library`) | `mb-5-pdlf-app1` (`C:\dev\dev-mb-5-pdlf\mb-5-pdlf-app1`) |
 | `pdlf` | `pdlf` (`C:\pdlf`) | none |
 
-The current repository is the one whose folder you are in. The `{slug}` is the project name from the first column. If the folder is not in this table: STOP, status BLOCKED, say that the folder is not a covered project.
+The current repository is the one whose folder you are in. The code repository is the project's App 1, its development workspace. The `{slug}` is the project name from the first column. If the folder is not in this table: STOP, status BLOCKED, say that the folder is not a covered project.
 
 ### Step 2 — Destination
 
