@@ -1,7 +1,7 @@
 ---
 title: "mb-project-docs"
 doc-id: "mb-c9d1d31b"
-updated: "2026-10-15"
+updated: "2026-10-16"
 ---
 
 # mb-project-docs
@@ -36,21 +36,22 @@ Files, per repository:
 
 Run `git rev-parse --show-toplevel` and match the folder name:
 
-| Project | Documentation repository | Code repository |
+| Project | Documentation repository | Code repositories |
 |---|---|---|
-| `mb-3-cs` | `mb-3-cs-project-library` (`C:\dev\dev-mb-3-cs\mb-3-cs-project-library`) | `mb-3-cs-app1` (`C:\dev\dev-mb-3-cs\mb-3-cs-app1`) |
-| `mb-4-ecom` | `mb-4-ecom-project-library` (`C:\dev\dev-mb-4-ecom\mb-4-ecom-project-library`) | `mb-4-ecom-app1` (`C:\dev\dev-mb-4-ecom\mb-4-ecom-app1`) |
-| `mb-5-pdlf` | `mb-5-pdlf-project-library` (`C:\dev\dev-mb-5-pdlf\mb-5-pdlf-project-library`) | `mb-5-pdlf-app1` (`C:\dev\dev-mb-5-pdlf\mb-5-pdlf-app1`) |
+| `mb-3-cs` | `mb-3-cs-project-library` (`C:\dev\dev-mb-3-cs\mb-3-cs-project-library`) | `mb-3-cs-app1` (`C:\dev\dev-mb-3-cs\mb-3-cs-app1`), `mb-3-cs-app3` (`C:\dev\dev-mb-3-cs\mb-3-cs-app3`), `mb-3-cs-app5` (`C:\dev\dev-mb-3-cs\mb-3-cs-app5`) |
+| `mb-4-ecom` | `mb-4-ecom-project-library` (`C:\dev\dev-mb-4-ecom\mb-4-ecom-project-library`) | `mb-4-ecom-app1` (`C:\dev\dev-mb-4-ecom\mb-4-ecom-app1`), `mb-4-ecom-app3` (`C:\dev\dev-mb-4-ecom\mb-4-ecom-app3`), `mb-4-ecom-app5` (`C:\dev\dev-mb-4-ecom\mb-4-ecom-app5`) |
+| `mb-5-pdlf` | `mb-5-pdlf-project-library` (`C:\dev\dev-mb-5-pdlf\mb-5-pdlf-project-library`) | `mb-5-pdlf-app1` (`C:\dev\dev-mb-5-pdlf\mb-5-pdlf-app1`), `mb-5-pdlf-app3` (`C:\dev\dev-mb-5-pdlf\mb-5-pdlf-app3`), `mb-5-pdlf-app5` (`C:\dev\dev-mb-5-pdlf\mb-5-pdlf-app5`) |
 | `pdlf` | `pdlf` (`C:\pdlf`) | none |
 
-The current repository is the one whose folder you are in. The code repository is the project's App 1, its development workspace. The `{slug}` is the project name from the first column. If the folder is not in this table: STOP, status BLOCKED, say that the folder is not a covered project.
+The current repository is the one whose folder you are in. The code repositories are the project's App 1 (its development workspace), App 3 and App 5. `N` is the app's number: 1, 3 or 5. The `{slug}` is the project name from the first column. If the folder is not in this table: STOP, status BLOCKED, say that the folder is not a covered project.
 
 ### Step 2 — Destination
 
 - **Documentation repository:** the repository root.
-- **Code repository:** check that `anvil.yaml` and the folder `theme` both exist at the repository root.
-  - Both exist: the destination is `theme\docs`. Create the folder if it is missing. Do not ask.
-  - Either is missing: the Anvil code repository does not exist. STOP. Tell the developer that the Anvil app must be created in Anvil first, then end the run with status BLOCKED. Create nothing.
+- **Code repository:** the destination is `theme\assets\docs\appN`.
+  - `anvil.yaml` is missing at the repository root: the Anvil code repository does not exist. STOP. Tell the developer that the Anvil app must be created in Anvil first, then end the run with status BLOCKED. Create nothing.
+  - `theme\assets\docs\appN` is missing: STOP. Never create it locally: Anvil carries a folder under `theme\assets` only when it was first uploaded through Anvil. Give the developer the one-time setup: (1) on the hard drive, create a folder named `appN` (the app's number) holding one file, `pilot-doc.txt`; (2) in the Anvil editor, open Assets, create the folder `docs` if it is missing, and upload the `appN` folder into it with Add asset > Upload folder; (3) pull the code repository; (4) delete the folder from the hard drive. End the run with status BLOCKED. Create nothing.
+  - Never remove `pilot-doc.txt` from `theme\assets\docs\appN`: it keeps the folder alive in Anvil.
 
 ### Step 3 — Read
 
@@ -78,7 +79,7 @@ Draft only the changes. Each file must pass its stray-line test from the specifi
 - **README:**
   - Missing: create it with a title, a summary of three to five lines (from the explainer's first section) and a "Required reading" list.
   - Present: keep its content, bring the summary up to date, and add or correct the "Required reading" list.
-  - The list names the config, `AGENTS.md` and the explainer. In a documentation repository write each as `[[name]]`. In a code repository write relative paths (`theme/docs/{slug}-config.md`), because no commit hook converts links there.
+  - The list names the config, `AGENTS.md` and the explainer. In a documentation repository write each as `[[name]]`. In a code repository write relative paths (`theme/assets/docs/appN/{slug}-config.md`), because no commit hook converts links there.
 
 ### Step 6 — Present, then stop
 
