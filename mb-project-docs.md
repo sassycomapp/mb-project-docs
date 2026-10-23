@@ -1,7 +1,7 @@
 ---
 title: "mb-project-docs"
 doc-id: "mb-c9d1d31b"
-updated: "2026-10-16"
+updated: "2026-10-23"
 ---
 
 # mb-project-docs
@@ -40,7 +40,6 @@ Run `git rev-parse --show-toplevel` and match the folder name:
 |---|---|---|
 | `mb-3-cs` | `mb-3-cs-project-library` (`C:\dev\dev-mb-3-cs\mb-3-cs-project-library`) | `mb-3-cs-app1` (`C:\dev\dev-mb-3-cs\mb-3-cs-app1`), `mb-3-cs-app3` (`C:\dev\dev-mb-3-cs\mb-3-cs-app3`), `mb-3-cs-app5` (`C:\dev\dev-mb-3-cs\mb-3-cs-app5`) |
 | `mb-4-ecom` | `mb-4-ecom-project-library` (`C:\dev\dev-mb-4-ecom\mb-4-ecom-project-library`) | `mb-4-ecom-app1` (`C:\dev\dev-mb-4-ecom\mb-4-ecom-app1`), `mb-4-ecom-app3` (`C:\dev\dev-mb-4-ecom\mb-4-ecom-app3`), `mb-4-ecom-app5` (`C:\dev\dev-mb-4-ecom\mb-4-ecom-app5`) |
-| `mb-5-pdlf` | `mb-5-pdlf-project-library` (`C:\dev\dev-mb-5-pdlf\mb-5-pdlf-project-library`) | `mb-5-pdlf-app1` (`C:\dev\dev-mb-5-pdlf\mb-5-pdlf-app1`), `mb-5-pdlf-app3` (`C:\dev\dev-mb-5-pdlf\mb-5-pdlf-app3`), `mb-5-pdlf-app5` (`C:\dev\dev-mb-5-pdlf\mb-5-pdlf-app5`) |
 | `pdlf` | `pdlf` (`C:\pdlf`) | none |
 
 The current repository is the one whose folder you are in. The code repositories are the project's App 1 (its development workspace), App 3 and App 5. `N` is the app's number: 1, 3 or 5. The `{slug}` is the project name from the first column. If the folder is not in this table: STOP, status BLOCKED, say that the folder is not a covered project.
